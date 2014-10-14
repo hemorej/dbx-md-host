@@ -1,0 +1,6 @@
+{
+  "key": "your_key",
+  "secret": "your_secret",
+  "accessKey": "access_key",
+  "name" : "app_name"
+}
