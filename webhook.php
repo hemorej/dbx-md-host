@@ -114,12 +114,7 @@ function answerChallenge($app){
   
   $ua = $app->request->getUserAgent() ;
 
-  if( $ua == "DropboxWebhooks/1.0" ){
-    $app->response->setBody($app->request->get('challenge'));
-  }
-  else{
-    $app->response->setStatus(403) ;
-  }
+  $app->response->setBody($app->request->get('challenge'));
 }
 
 function verifySignature($app){
