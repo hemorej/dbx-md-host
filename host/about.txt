@@ -1,3 +1,0 @@
-title: About
-----
-# hello! some stuff about this project
