@@ -11,18 +11,19 @@
 |
 */
 
+
+Route::get('/dbx/webhook', array(
+	'uses' => 'DropboxController@challengeHandler'
+));
+
+Route::post('/dbx/webhook', array(
+	'uses' => 'DropboxController@webhookHandler'
+));
+
 Route::get('/', array(
 	'uses' => 'ContentController@serveDefault'
 ));
 
 Route::get('/{file}', array(
 	'uses' => 'ContentController@serve'
-));
-
-Route::get('/webhook', array(
-	'uses' => 'DropboxController@challengeHandler'
-));
-
-Route::post('/webhook', array(
-	'uses' => 'DropboxController@webhookHandler'
 ));
