@@ -33,7 +33,7 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('jerome-arfouche.com')
+host('')
     ->set('deploy_path', get('deploy_path'))
 	->user('')
     ->set('branch', 'master');
