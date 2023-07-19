@@ -12,7 +12,7 @@
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
-        "laravel/framework": "6.20.42",
+        "laravel/framework": "6.20.44",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
