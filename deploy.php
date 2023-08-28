@@ -7,12 +7,12 @@ require 'recipe/laravel.php';
 set('application', 'dropbox');
 
 // Project repository
-set('repository', '');
+set('repository', 'https://github.com/hemorej/dbx-md-host');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
 
-set('deploy_path', '');
+set('deploy_path', '/home/jerome_a_/jerome-arfouche.com/dropbox');
 
 // Shared files/dirs between deploys 
 set('writable_mode', 'chmod');
@@ -28,21 +28,31 @@ add('writable_dirs', [
     'bootstrap/cache',
 ]);
 
-set('keep_releases', 10);
+set('keep_releases', 5);
 set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('')
+host('jerome-arfouche.com')
     ->set('deploy_path', get('deploy_path'))
-	->user('')
+	->user('jerome_a_')
     ->set('branch', 'master');
     
 // Tasks
 
-task('build', function () {
-    run('cd {{release_path}} && build');
+task('deploy:vendor', function(){
+    run('cd {{release_path}} && /usr/local/php82/bin/php /home/jerome_a_/.php/composer install --no-dev --no-interaction --optimize-autoloader');
 });
+
+task('deploy', [
+    'deploy:prepare',
+    'deploy:lock',
+    'deploy:release',
+    'deploy:update_code',
+    'deploy:shared',
+    'deploy:vendor',
+    'deploy:unlock'
+]);
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
