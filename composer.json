@@ -11,7 +11,7 @@
         "php": "^8.2",
         "erusev/parsedown": "^1.7",
         "guzzlehttp/guzzle": "^7.0",
-        "laravel/framework": "10.21.0",
+        "laravel/framework": "10.22.0",
         "laravel/tinker": "^2.0"
     },
     "require-dev": {
