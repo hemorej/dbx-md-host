@@ -19,7 +19,7 @@
         "spatie/laravel-ignition": "^2.0",
         "filp/whoops": "^2.0",
         "nunomaduro/collision": "^7.0",
-        "phpunit/phpunit": "^10.0"
+        "phpunit/phpunit": "^11.0"
     },
     "config": {
         "optimize-autoloader": true,
