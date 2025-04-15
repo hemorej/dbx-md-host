@@ -13,7 +13,7 @@
         "php": "^8.2",
         "erusev/parsedown": "^1.7",
         "guzzlehttp/guzzle": "^7.0",
-        "laravel/framework": "10.48.23",
+        "laravel/framework": "10.48.29",
         "laravel/tinker": "^2.0"
     },
     "require-dev":
